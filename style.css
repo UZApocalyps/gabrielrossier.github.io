@@ -1,0 +1,55 @@
+html{
+    scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+   
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+.absolute-container{
+    position: absolute;
+}
+.background-container{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(4px) brightness(0.8);
+
+}
+
+.sections{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.section{
+    position: absolute;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.centered{
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+#arrow-next{
+    cursor: pointer;
+    rotate: -90deg;
+}
