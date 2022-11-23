@@ -43,39 +43,39 @@ document.onreadystatechange = () => {
             easing: 'linear',
             rotate: [
                 {
-                    value: Math.floor(Math.random() * 360),
+                    value: anime.random(0,200),
                     duration: 200 + Math.floor(Math.random() * 1000),
                     easing: 'easeInOutSine'
                 }
             ],
             keyframes: [
                 {
-                    translateX: ope * Math.floor(Math.random() * 200) + 'px',
-                    translateY: ope * Math.floor(Math.random() * 200) + 'px',
-
+                    translateX: ope * anime.random(0,200),
+                    translateY: ope * anime.random(0,200),
+                    easing: 'easeInOutElastic(1, .6)'
 
 
                 },
                 {
-                    translateX: ope * Math.floor(Math.random() * 200) + 'px',
-                    translateY: ope * Math.floor(Math.random() * 200) + 'px',
-
+                    translateX: ope * anime.random(0,200),
+                    translateY: ope * anime.random(0,200),
+                    easing: 'spring(1, 80, 10, 0)'
                 },
                 {
-                    translateX: ope * Math.floor(Math.random() * 200) + 'px',
-                    translateY: ope * Math.floor(Math.random() * 200) + 'px'
-
+                    translateX: ope * anime.random(0,200),
+                    translateY: ope * anime.random(0,200),
+                    easing: 'spring(1, 80, 10, 0)'
                 },
                 {
-                    translateX: ope * Math.floor(Math.random() * 200) + 'px',
-                    translateY: ope * Math.floor(Math.random() * 200) + 'px'
-
+                    translateX: ope * anime.random(0,200),
+                    translateY: ope * anime.random(0,200),
+                    easing: 'easeInOutElastic(1, .6)'
                 },
             ],
             direction: 'alternate',
-            duration: 1000 + Math.floor(Math.random() * 1000),
+            duration: 1500 + Math.floor(Math.random() * 1000),
             loop: true,
-            easing: 'spring(1, 80, 10, 0)'
+            
         })
     });
 
