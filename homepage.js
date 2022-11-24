@@ -105,13 +105,11 @@ function generateRandomeShapes(shapesNumber) {
             let square = document.createElement('div');
             square.classList.add('square-' + i);
             square.classList.add('absolute-container');
-
             square.style.backgroundColor = getRandomColor();
             square.style.top = Math.floor(Math.random() * 100) + 'vh';
             square.style.left = Math.floor(Math.random() * 100) + 'vw';
             square.style.width = Math.floor(Math.random() * 100) + 'px';
             square.style.height = square.style.width;
-
             shapesContainer.appendChild(square);
         }
     }

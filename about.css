@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+body {
+    background: rgb(45, 0, 15);
+    background: linear-gradient(340deg, rgba(45, 0, 15, 1) 0%, rgba(0, 8, 6, 1) 30%);
+    background-position: fixed;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+p {
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    margin-top: 50px;
+
+}
+
+.sub-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.main-container::-webkit-scrollbar {
+    display: none;
+
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    width: 33%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.text-description {
+    opacity: 0;
+    color: white;
+    font-family: 'Muli', sans-serif;
+    text-align: center;
+}
+
+.svg-box {
+    cursor: pointer;
+}
+
+.h-50 {
+    height: 50%;
+}
+
+.h-70 {
+    height: 70%;
+}
+
+.box {
+    position: relative;
+}
+
+.box .left,
+.right,
+.top {
+
+    width: 100px;
+    height: 100px;
+    border: solid 1px white;
+    z-index: 88;
+    cursor: pointer;
+
+}
+.top div{
+    width: 100px;
+    height: 45px;
+    border: solid 1px white;
+    background-color: black;
+    z-index: 1000;
+}
+
+.box .left {
+    position: absolute;
+    left: 50%;
+    transform: rotate(45deg) rotate3d(1, 1, -1, 300deg) translate3d(0px, 18px, 2px);
+}
+
+.box .right {
+    position: absolute;
+    right: 50%;
+    transform: rotate(45deg) rotate3d(1, 1, -1, 60deg) translate3d(19px, -1px, 2px);
+}
+
+.box .top {
+    position: absolute;
+    transform: rotate(45deg) rotate3d(0, 1, 1, 109deg) translate3d(72px, 0px, -80px);
+}
+.box .top .part1{
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+
+}
+.box .top .part2{
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-30 {
+    width: 30%;
+}
