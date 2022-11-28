@@ -10,10 +10,10 @@ document.onreadystatechange = () => {
         navigator.userAgent.match(/iPod/i) ||
         navigator.userAgent.match(/BlackBerry/i) ||
         navigator.userAgent.match(/Windows Phone/i)) {
-        shapesNumber = 10
+        shapesNumber = 3
     }
     if (window.innerWidth < 768) {
-        shapesNumber = 10
+        shapesNumber = 3
     }
     let shapes = generateRandomeShapes(shapesNumber);
     body.appendChild(shapes);
