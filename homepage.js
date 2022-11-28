@@ -2,7 +2,16 @@ document.onreadystatechange = () => {
     let body = document.querySelector('body');
     body.style.backgroundColor = '#38040E';
     let shapesNumber = 30
-    //detect if user is on mobile
+    //detect if user is on mobile with user agent
+    if (navigator.userAgent.match(/Android/i) ||
+        navigator.userAgent.match(/webOS/i) ||
+        navigator.userAgent.match(/iPhone/i) ||
+        navigator.userAgent.match(/iPad/i) ||
+        navigator.userAgent.match(/iPod/i) ||
+        navigator.userAgent.match(/BlackBerry/i) ||
+        navigator.userAgent.match(/Windows Phone/i)) {
+        shapesNumber = 10
+    }
     if (window.innerWidth < 768) {
         shapesNumber = 10
     }
