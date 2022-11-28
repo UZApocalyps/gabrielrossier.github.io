@@ -1,7 +1,12 @@
 document.onreadystatechange = () => {
     let body = document.querySelector('body');
     body.style.backgroundColor = '#38040E';
-    let shapes = generateRandomeShapes(30);
+    let shapesNumber = 30
+    //detect if user is on mobile
+    if (window.innerWidth < 768) {
+        shapesNumber = 10
+    }
+    let shapes = generateRandomeShapes(shapesNumber);
     body.appendChild(shapes);
 
 
