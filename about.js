@@ -53,6 +53,12 @@ document.onreadystatechange = () => {
             scale: 0.9,
 
         })
+        let part2 = document.querySelector('.part2');
+        let part1 = document.querySelector('.part1');
+        part1.classList.add('ouvre');
+        part2.classList.add('ouvre');
+        let top = document.querySelector('.top');
+        top.classList.add('ouvre');
     });
     document.querySelector('.box div').addEventListener('mouseleave', (event) => {
         anime({
@@ -69,6 +75,13 @@ document.onreadystatechange = () => {
             },
             scale: 1,
         })
+        let part2 = document.querySelector('.part2');
+        let part1 = document.querySelector('.part1');
+        let top = document.querySelector('.top');
+        top.classList.remove('ouvre');
+        part1.classList.remove('ouvre');
+
+        part2.classList.remove('ouvre');
     });
 
 };
