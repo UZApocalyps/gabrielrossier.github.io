@@ -23,18 +23,24 @@ document.onreadystatechange = () => {
         easing: 'easeInOutSine',
         duration: 1000,
     })
+    let box = document.querySelector('.box');
+    let transformX = box.style.rotateX;
+    let transformY = box.style.rotateY;
+
+
     var boxAnime = anime({
         targets: '.box',
-        delay: 1000,
         keyframes: [
             {
-                scale:1.2,
+                rotateX:-45,
+                rotateY:-24
+
             },
 
         ],
         direction: 'alternate',
-        duration:500,
         loop: true,
+        duration: 500,
         easing: 'linear',
     })
     //mouse over listener
@@ -43,22 +49,15 @@ document.onreadystatechange = () => {
         boxAnime.pause();
         anime({
             targets: '.box',
-            rotate: [
-                {
-                    value: -2,
-                    easing: 'easeInOutSine'
-                }
-            ],
+            rotateX:-45,
+            rotateY:-24,
             translateY: 20,
-            scale: 0.9,
 
         })
-        let part2 = document.querySelector('.part2');
-        let part1 = document.querySelector('.part1');
-        part1.classList.add('ouvre');
-        part2.classList.add('ouvre');
-        let top = document.querySelector('.top');
-        top.classList.add('ouvre');
+        let part2 = document.querySelector('.box__face--top--right');
+        let part1 = document.querySelector('.box__face--top--left');
+        part1.classList.add('ouvre-l');
+        part2.classList.add('ouvre-r');
     });
     document.querySelector('.box div').addEventListener('mouseleave', (event) => {
         anime({
@@ -70,18 +69,15 @@ document.onreadystatechange = () => {
                 }
             ],
             translateY: 0,
-            complete:()=>{
+            complete: () => {
                 boxAnime.restart();
             },
-            scale: 1,
         })
-        let part2 = document.querySelector('.part2');
-        let part1 = document.querySelector('.part1');
-        let top = document.querySelector('.top');
-        top.classList.remove('ouvre');
-        part1.classList.remove('ouvre');
+        let part2 = document.querySelector('.box__face--top--right');
+        let part1 = document.querySelector('.box__face--top--left');
+        part1.classList.remove('ouvre-l');
 
-        part2.classList.remove('ouvre');
+        part2.classList.remove('ouvre-r');
     });
 
 };

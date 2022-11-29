@@ -1,0 +1,96 @@
+body { font-family: sans-serif; }
+
+.scene {
+  width: 300px;
+  height: 300px;
+  margin: 80px;
+  perspective: 400px;
+}
+
+.box {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  transform: translateZ(-150px) rotateX(325deg) rotateY(325deg);
+  cursor: pointer;
+
+}
+
+
+
+.box__face {
+  position: absolute;
+  border: 2px solid black;
+
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-image: url("./images/carton.jpg");
+
+}
+
+.box__face--front,
+.box__face--back {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+}
+
+.box__face--right,
+.box__face--left {
+  width: 200px;
+  height: 200px;
+  left: 100px;
+  line-height: 200px;
+}
+
+.box__face--top--right{
+    width: 100px;
+    height: 200px;
+    top: 50px;
+    line-height: 100px;
+    transform-origin: 0;
+    transition: transform 1s ease-in-out;
+}
+.box__face--top--left{
+    width: 100px;
+    height: 200px;
+    top: 50px;
+    transform-origin: 100px;
+    transition: transform 1s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.box-text-top-left{
+    transform: rotate(-90deg);
+}
+.box__face--bottom {
+  width: 200px;
+  height: 200px;
+  top: 50px;
+  line-height: 100px;
+}
+.ouvre-l{
+    transform: rotateX( 90deg) translateZ(152px) translateX(100px) translateY(-4px) rotateY(116deg) !important;
+}
+.ouvre-r{
+    transform: rotateX( 90deg) translateZ(150px) translateX(-1px) translateY(-4px) rotateY(-140deg) !important;
+}
+
+.box div{
+}
+
+.box__face--front  { transform: rotateY(  0deg) translateZ( 100px); }
+.box__face--back   { transform: rotateY(180deg) translateZ( 100px); }
+
+.box__face--right  { transform: rotateY( 90deg) translateZ(0px); }
+.box__face--left   { transform: rotateY(-90deg) translateZ(200px); }
+
+.box__face--top--right    { transform: rotateX( 90deg) translateZ(150px); }
+.box__face--top--left    { transform:rotateX( 90deg) translateZ(150px) translateX(99px); }
+
+.box__face--bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+label { margin-right: 10px; }

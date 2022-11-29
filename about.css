@@ -63,7 +63,9 @@ p {
 .svg-box {
     cursor: pointer;
 }
-
+.h-20{
+    height: 20%;
+}
 .h-50 {
     height: 50%;
 }
@@ -78,7 +80,6 @@ p {
 .box {
     position: relative;
     color: white;
-    scale: 1.5;
 }
 
 .box .left,
@@ -96,11 +97,7 @@ p {
 }
 .right .text{
     font-size: 30px;
-    background: -webkit-linear-gradient(#ff3c00, #e73c7e, #23a6d5, #0000ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-align: center;
-    font-family: 'Muli', sans-serif;
+
 
 }
 .left .text{
@@ -121,53 +118,6 @@ p {
     z-index: 1000;
 }
 
-.box .left {
-    position: absolute;
-    left: 50%;
-    transform: rotate(45deg) rotate3d(1, 1, -1, 300deg) translate3d(2px, 16px, 2px);
-    z-index: -1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.box .right {
-    position: absolute;
-    right: 50%;
-    transform: rotate(45deg) rotate3d(1, 1, -1, 60deg) translate3d(27px, 0px, 2px);
-    z-index: -1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.box .top {
-    position: absolute;
-    transform: rotate(45deg) rotate3d(0, 1, 1, 109deg) translate3d(72px, 0px, -80px);
-}
-
-.box .top .part1{
-
-    transition: 0.5s ease-in-out;
-    transform: translate(-5px,-5px) ;
-
-}
-
-.box .top .part2{
-
-    transition:all 0.5s ease-in-out;
-    transform: translate(-5px,-5px);
-}
-.part2.ouvre{
-    border: solid 5px black !important;
-    transform-origin: 0 50px ;
-    transform: rotate3d(1,0,0,195deg) translate3d(-7px,0px,0px) !important;
-}
-.part1.ouvre{
-    border: solid 5px black !important;
-    transform-origin: 0 0 ;
-    transform: rotate3d(1,0,0,201deg) translate3d(-7px,0px,0px) !important;
-}
 .top.ouvre{
     filter: brightness(0.8);}
 
